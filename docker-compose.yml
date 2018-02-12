@@ -20,7 +20,7 @@ services:
       - 'redis'
       - 'app'
     build: .
-    command: bash start_jobs
+    command: bash start_jobs.sh
     volumes:
       - '.:/petadmin'
     volumes_from:
@@ -50,7 +50,7 @@ services:
     ports:
       - 1025:25
       - 1080:80
-      
+
 volumes:
   redis:
   postgres:
