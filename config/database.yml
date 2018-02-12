@@ -11,9 +11,8 @@ development:
 
 test:
   <<: *default
-  database: petadmin_exchance_test
+  database: petadmin_test
 
 production:
   <<: *default
-  database: petadmin_exchance_production
-view raw
+  database: petadmin_production
