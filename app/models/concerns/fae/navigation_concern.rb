@@ -23,18 +23,33 @@ module Fae
     #   ]
     # end
 
-    def structure
-      [
+    
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+  def structure
+    [
+      item('Manage', subitems: [
         item('Clients', path: admin_clients_path),
-        item('Products', path: admin_products_path),
-        item('Services', path: admin_services_path),
         item('Discounts', path: admin_discounts_path),
-        item('Campaigns', path: admin_campaigns_path),
         item('Suppliers', path: admin_suppliers_path),
+        item('Services', path: admin_services_path),
+        item('Products', path: admin_products_path),
         item('Sells', path: admin_sells_path),
-        # scaffold inject marker
-      ]
-    end
+      ]),
+      item('Marketing', subitems: [
+        item('Campaigns', path: admin_campaigns_path)
+      ]),
+      item('+ Sell', path: new_admin_sell_path)
+    ]
+  end
 
   end
 end
